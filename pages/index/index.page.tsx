@@ -3,13 +3,10 @@ import Banner from '@/components/banner';
 
 export { Page };
 
-
 function Page() {
-  
   let key = import.meta.env.VITE_SOME_KEY;
   let url = import.meta.env.VITE_URL;
-  console.log("Url is " + url);
-  console.log("Key is  " + key);
+  console.log('Url is ' + import.meta.env.VITE_SOME_KEY);
 
   const projectsRef = React.useRef<HTMLDivElement>(null);
 
@@ -29,6 +26,8 @@ function Page() {
         buttonText="Explore Projects"
         buttonPress={scrollToProjects}
       />
+      {console.log(import.meta.env.VITE_KEY)}
+      <h1>{import.meta.env.VITE_KEY}</h1>
     </main>
   );
 }
