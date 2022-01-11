@@ -3,7 +3,7 @@
     "dev": "npm run server",
     "prod": "npm run build && npm run server:prod",
     "build": "vite build && vite build --ssr",
-    "vercel-build": "vite build && vite build --ssr && vite-plugin-ssr prerender",
+    "vercel-build": "vite build --mode staging && vite build --ssr && vite-plugin-ssr prerender",
     "server": "ts-node ./server",
     "server:prod": "cross-env NODE_ENV=production ts-node ./server"
   },
