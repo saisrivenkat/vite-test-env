@@ -1,0 +1,91 @@
+body {
+  font-size: 16px;
+}
+
+body,
+html,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #d7e0ec;
+}
+
+.ant-btn {
+  border-radius: 40px;
+  border: 1px solid #cdff45;
+  box-shadow: 0px 20px 48px 0px #c4a2a226;
+}
+
+.ant-btn-lg {
+  padding: 8px 20px;
+  height: auto;
+}
+
+.background {
+  background: #6aa4f0; /* Old browsers */
+  background: radial-gradient(circle 500px at 25% 35%, #3453af, #acb1b8);
+}
+
+.line {
+  position: relative;
+
+  &.top {
+    &::after {
+      content: none;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(to right, #5d9bff00, #1b56a3, #30333800);
+    }
+  }
+}
+
+.line::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, #30333800, #787e86, #30333800);
+}
+
+.selected {
+  background-color: #542f38;
+  border: 1px solid #7b5f66;
+  font-weight: bold;
+}
+
+.link-badge {
+  background-color: #000000;
+  color: #bba3a7;
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
+  white-space: nowrap;
+}
+
+// Overriding antd step color
+.ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title,
+.ant-steps-item-subtitle,
+.ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-description {
+  color: #fff !important;
+}
+
+.ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title,
+.ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-description {
+  color: #7d828a !important;
+}
+
+.ant-steps-item-wait .ant-steps-item-icon > .ant-steps-icon .ant-steps-icon-dot {
+  border: 1px solid #fff;
+}
